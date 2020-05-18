@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>【博客搭建系列】（四）ICARUS主题个性化 | Keep Forward | 吴江龙</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="博客搭建系列">
+    <meta name="description" content="为了能让博客可用、易用及美观，这篇文章记录了对ICARUS主题中默认的样式及插件等进行个性化调整的方法和过程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【博客搭建系列】（四）ICARUS主题个性化">
+<meta property="og:url" content="https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-4/index.html">
+<meta property="og:site_name" content="Keep Forward">
+<meta property="og:description" content="为了能让博客可用、易用及美观，这篇文章记录了对ICARUS主题中默认的样式及插件等进行个性化调整的方法和过程。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-4/4-1.gif">
+<meta property="og:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-4/4-2.gif">
+<meta property="og:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-4/image-20200514144004513.png">
+<meta property="og:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-4/image-20200514144115102.png">
+<meta property="og:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-4/image-20200513230838428.png">
+<meta property="og:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-4/image-20200513230901412.png">
+<meta property="og:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-4/image-20200514151908237.png">
+<meta property="og:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-4/image-20200514151100751.png">
+<meta property="og:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-4/image-20200512204837181.png">
+<meta property="og:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-4/4-5.gif">
+<meta property="og:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-4/4-4.gif">
+<meta property="og:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-4/4-6.gif">
+<meta property="og:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-4/4-7.gif">
+<meta property="article:published_time" content="2020-05-18T12:46:15.303Z">
+<meta property="article:modified_time" content="2020-05-18T12:50:12.934Z">
+<meta property="article:author" content="JiangLong Wu">
+<meta property="article:tag" content="博客搭建系列">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-4/4-1.gif">
+    
+        <link rel="alternate" type="application/atom+xml" title="Keep Forward" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon-wujl.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <link rel="stylesheet" href="/css/prism/prism-tomorrow-night.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-list-ul"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/back_blue.png)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar-wujl.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">JiangLong Wu</h5>
+          <a href="mailto:wujl.vince@gmail.com" title="wujl.vince@gmail.com" class="mail">wujl.vince@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives/"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories/"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags/"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/books/"  >
+                <i class="icon icon-lg icon-book"></i>
+                读书
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about/"  >
+                <i class="icon icon-lg icon-info-circle"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">【博客搭建系列】（四）ICARUS主题个性化</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">【博客搭建系列】（四）ICARUS主题个性化</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-05-18T12:46:15.303Z" itemprop="datePublished" class="page-time">
+  2020-05-18
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B/">自己动手</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#布局"><span class="post-toc-text">布局</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#主页宽度"><span class="post-toc-text">主页宽度</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#主页布局"><span class="post-toc-text">主页布局</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码样式"><span class="post-toc-text">代码样式</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#挂件"><span class="post-toc-text">挂件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#插件"><span class="post-toc-text">插件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#分享插件"><span class="post-toc-text">分享插件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#评论插件"><span class="post-toc-text">评论插件</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文章"><span class="post-toc-text">文章</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#样式修改"><span class="post-toc-text">样式修改</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#前后对比"><span class="post-toc-text">前后对比</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#参考资料"><span class="post-toc-text">参考资料</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Linux-construct-hexo-4"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">【博客搭建系列】（四）ICARUS主题个性化</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-05-18 20:46:15" datetime="2020-05-18T12:46:15.303Z"  itemprop="datePublished">2020-05-18</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B/">自己动手</a></li></ul>
+
+
+
+            
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>  为了能让博客可用、易用及美观，这篇文章记录了对ICARUS主题中默认的样式及插件等进行个性化调整的方法和过程。</p>
+<a id="more"></a>     
+<h3 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h3><h4 id="主页宽度"><a href="#主页宽度" class="headerlink" title="主页宽度"></a>主页宽度</h4><p>调整之前</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/gallery/Linux-construct-hexo-4/4-1.gif" alt="4-1" title="">
+                </div>
+                <div class="image-caption">4-1</div>
+            </figure>
+<p>调整之后</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/gallery/Linux-construct-hexo-4/4-2.gif" alt="4-2" title="">
+                </div>
+                <div class="image-caption">4-2</div>
+            </figure>
+<h4 id="主页布局"><a href="#主页布局" class="headerlink" title="主页布局"></a>主页布局</h4><p>修改前</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/gallery/Linux-construct-hexo-4/image-20200514144004513.png" alt="image-20200514144004513" title="">
+                </div>
+                <div class="image-caption">image-20200514144004513</div>
+            </figure>
+<p>修改后</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/gallery/Linux-construct-hexo-4/image-20200514144115102.png" alt="image-20200514144115102" title="">
+                </div>
+                <div class="image-caption">image-20200514144115102</div>
+            </figure>
+<h4 id="代码样式"><a href="#代码样式" class="headerlink" title="代码样式"></a>代码样式</h4><p>修改前</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/gallery/Linux-construct-hexo-4/image-20200513230838428.png" alt="image-20200513230838428" title="">
+                </div>
+                <div class="image-caption">image-20200513230838428</div>
+            </figure>
+<p>修改后</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/gallery/Linux-construct-hexo-4/image-20200513230901412.png" alt="image-20200513230901412" title="">
+                </div>
+                <div class="image-caption">image-20200513230901412</div>
+            </figure>
+<h3 id="挂件"><a href="#挂件" class="headerlink" title="挂件"></a>挂件</h3><p>修改前</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/gallery/Linux-construct-hexo-4/image-20200514151908237.png" alt="image-20200514151908237" title="">
+                </div>
+                <div class="image-caption">image-20200514151908237</div>
+            </figure>
+<p>修改后</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/gallery/Linux-construct-hexo-4/image-20200514151100751.png" alt="image-20200514151100751" title="">
+                </div>
+                <div class="image-caption">image-20200514151100751</div>
+            </figure>
+<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p><code>ICARUS</code>支持的插件类型有很多，如下所示。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/gallery/Linux-construct-hexo-4/image-20200512204837181.png" alt="image-20200512204837181" title="">
+                </div>
+                <div class="image-caption">image-20200512204837181</div>
+            </figure>
+<p>下面仅列举目前本博客选择安装的插件。</p>
+<h4 id="分享插件"><a href="#分享插件" class="headerlink" title="分享插件"></a>分享插件</h4><p><code>ICARUS</code>支持的分享插件有很多，比如<code>AddThis</code>,<code>AddToAny</code>,<code>百度分享</code>,<code>Share.js</code>等，横向比较之后，<code>ShareThis</code>的风格更适合本博客。</p>
+<p>插件安装过程比较简单，<code>ICARUS</code>主题文档清晰明了，此处不再赘述，详情请查阅文末的参考资料。安装完成后的效果如下图。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/gallery/Linux-construct-hexo-4/4-5.gif" alt="4-5" title="">
+                </div>
+                <div class="image-caption">4-5</div>
+            </figure>
+<h4 id="评论插件"><a href="#评论插件" class="headerlink" title="评论插件"></a>评论插件</h4><p>评论插件在<code>Disqus</code>和<code>Valine</code>之间，选择了更适合国内环境的<code>Valine</code>。</p>
+<p>安装过程比较简单，<code>ICARUS</code>主题文档清晰明了，此处不再赘述，详情请查阅文末的参考资料。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/gallery/Linux-construct-hexo-4/4-4.gif" alt="4-4" title="">
+                </div>
+                <div class="image-caption">4-4</div>
+            </figure>
+<h3 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h3><h4 id="样式修改"><a href="#样式修改" class="headerlink" title="样式修改"></a>样式修改</h4><p>修改路径<code>/themes/icarus/include/style/article.styl</code></p>
+<pre><code class="lang-stylus">/* ---------------------------------
+ *    Article Summary and Content
+ * --------------------------------- */
+$article-font-size ?= 1.1rem
+
+article
+    &amp;.media
+        .media-content
+            color: $text-light
+
+            .title
+                margin: 0
+                line-height: inherit
+
+    &amp;.article
+        .article-meta, .article-tags
+            color: $text-light
+
+        .article-meta
+            overflow-x: auto
+            margin-bottom: .5rem
+
+        .article-more
+            @extend .button.is-light
+
+        .content
+            word-wrap: break-word
+            font-size: $article-font-size
+            color: #34495E
+            a
+                color: #42B983
+                font-weight: bold
+            p
+                margin-bottom: 0.4rem
+
+            h1
+                font-size: 1.75em
+
+            h2
+                font-size: 1.6em
+
+            h3
+                font-size: 1.5em
+                font-weight: bolder
+                margin-bottom: 0em
+                color: #777777
+
+            h4
+                font-size: 1.3em
+                font-weight: bolder
+                margin-bottom: 0.2em
+                color: #34495E
+                margin-top: 0.7em
+            h5
+                font-size: 1em
+
+            pre
+                font-size: 1em
+                font-family: Source Code Pro
+
+            code
+                padding: 0
+                background: transparent
+                overflow-wrap: break-word
+                color: #EB7D23
+                font-size: 1em
+                font-weight: bolder
+                font-family: Source Code Pro
+                margin-left: 3px
+                margin-right: 3px
+
+            blockquote
+                background-color: #ECF8F2
+                border-left-color: #42B983
+                margin-bottom: 0.5em
+                margin-top: 1.2em
+                padding-top: 0.8em
+                padding-right: 0.8em
+                padding-bottom: 0.8em
+                padding-left: 0.8em
+                &amp;.pullquote
+                    float: right
+                    max-width: 50%
+                    font-size: 1.15rem
+                    position: relative
+
+                footer
+                    strong + cite
+                        margin-left: .5em
+
+            .message.message-immersive
+                border-radius: 0
+                margin: 0 0-($card-content-padding) $card-content-padding 0-($card-content-padding)
+                .message-body
+                    border: none
+
+.rtl
+    direction: rtl
+
+    .level
+        &amp;, &amp;.is-mobile
+            .level-item:not(:last-child)
+                margin-left: .75rem
+                margin-right: 0
+
+.thumbnail
+    object-fit: cover
+    width: 100% !important
+    height: 100% !important
+
+// Overflow table
+.table-overflow
+    overflow-x: auto
+
+    table
+        width: auto !important
+
+        th
+            word-break: keep-all
+
+// Video container
+.video-container
+    position: relative
+    padding-bottom: 56.25%
+    padding-top: 25px
+    height: 0
+
+    iframe
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+</code></pre>
+<h4 id="前后对比"><a href="#前后对比" class="headerlink" title="前后对比"></a>前后对比</h4><p>修改前</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/gallery/Linux-construct-hexo-4/4-6.gif" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>修改后</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/gallery/Linux-construct-hexo-4/4-7.gif" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><blockquote>
+<p><a href="https://blog.zhangruipeng.me/hexo-theme-icarus/" target="_blank" rel="noopener">[1] ICARUS主题文档</a><br><a href="https://big-news.cn/2019/08/12/hexo主题Icarus浅度修改教程/" target="_blank" rel="noopener">[2] hexo主题Icarus浅度修改教程</a></p>
+</blockquote>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2020-05-18T12:50:12.934Z" itemprop="dateUpdated">2020-05-18 20:50:12</time>
+</span><br>
+
+
+        
+        文章发布地址：<a href="/2020/05/18/Linux-construct-hexo-4/" target="_blank" rel="external">https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-4/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://wujlmochasoft.github.io">
+            <img src="/img/avatar-wujl.jpg" alt="JiangLong Wu">
+            JiangLong Wu
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%B3%BB%E5%88%97/" rel="tag">博客搭建系列</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-4/&title=《【博客搭建系列】（四）ICARUS主题个性化》 — Keep Forward&pic=https://wujlmochasoft.github.io/img/avatar-wujl.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-4/&title=《【博客搭建系列】（四）ICARUS主题个性化》 — Keep Forward&source=  为了能让博客可用、易用及美观，这篇文章记录了对ICARUS主题中默认的样式及插件等进行个性化调整的方法和过程。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-4/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【博客搭建系列】（四）ICARUS主题个性化》 — Keep Forward&url=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-4/&via=https://wujlmochasoft.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-4/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/05/18/Linux-construct-hexo-3/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">【博客搭建系列】（三）博客免费上线——GitHub</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment v" id="vcomments"></div>
+    <!-- <div class="comment" id="comment"></div> -->
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+    <!-- <script src="//t1.aixinxi.net/o_1c3n4pim01nl3jg91b6l1kjtkvsa.js"></script> -->
+    <!-- <script src="/js/Valine.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cat.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            av: AV,
+            // el: '#comments',
+            el: '#vcomments',
+            emoticon_url: 'https://abelsu7.top/alu', //表情图片网址
+            emoticon_list: ["赞一个.png","坐等.png","长草.png","阴暗.png","邪恶.png","小眼睛.png","想一想.png","献黄瓜.png","献花.png","喜极而泣.png","无语.png","无所谓.png","无奈.png","投降.png","深思.png","期待.png","狂汗.png","蜡烛.png","看不见.png","惊喜.png","击掌.png","欢呼.png","得意.png","不出所料.png","观察.png"],//表情图片文件名
+            // notify: 'false' == 'false',
+            // verify: 'false' == 'false',
+            // notify: 'false',
+            // verify: 'false',
+            notify: false,
+            verify: false,
+            appId: "FtNqDTQG78qc0uYx1Qq69hTM-MdYXbMMI",
+            appKey: "bqe57UtEf4N68odS3XOEnwXq",
+            avatar: "mp",
+            placeholder: "Write a comment",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+            <p>
+                
+                    <span>
+                        <a href="/atom.xml" target="_blank" class="rss" title="rss">
+                            <i class="icon icon-lg icon-rss"></i>
+                        </a>
+                    </span>
+                    
+                        <span>
+                            博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a>
+                        </span>
+            </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>
+                JiangLong Wu &copy;
+                    
+                                2020
+            </span>
+            <span>
+                
+                        Power by
+                        <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+                        <a href="https://github.com/abelsu7/hexo-theme-indigo-plus" target="_blank">indigo plus</a>
+                        <p>Hosted by <a href="https://pages.github.com" target="_blank" style="font-weight: bold">Github Pages</a></p>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<a href="javascript:;" id="gobottom" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-comments"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-4/&title=《【博客搭建系列】（四）ICARUS主题个性化》 — Keep Forward&pic=https://wujlmochasoft.github.io/img/avatar-wujl.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-4/&title=《【博客搭建系列】（四）ICARUS主题个性化》 — Keep Forward&source=  为了能让博客可用、易用及美观，这篇文章记录了对ICARUS主题中默认的样式及插件等进行个性化调整的方法和过程。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-4/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【博客搭建系列】（四）ICARUS主题个性化》 — Keep Forward&url=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-4/&via=https://wujlmochasoft.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-4/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACrUlEQVR42u3aQW7DMAwEwP7/0y3QU4HCzi4lOTmMT0Hs2BwdLIbk11d8fP8eyff5lVfX/L3y6vPmAw8PD28U+tWRBP3/+qtw77/P75/EjIeHh3ead/8qT259f+WuJ9bbDx4eHt5beW24K0nzLL3Gw8PD+zReXrCIkt1y4fDw8PA+jZckysnZWR31fjN4qNaCh4eHF/PaBtgnfD7Y38PDw8Nb6KrPGmOzs8mVdYR4eHh4B3htI79tcbWDCC012jDw8PDwDvBmjai2oJDc7Z43eyIeHh7eXt6sANqODuRnk3Jwvv3g4eHhneDlRYG8KbVr1GA99cfDw8N7hpeXGNYT6HYQoU3N8fDw8N7FW29i5Yn7yvbw4n8DHh4e3iberPHfli2SQPMEvYgBDw8P7wAvL7Mm6W+bWK/vaVFBGQ8PD+8Ar33150WEvJW1d1kv74+Hh4e3iZe/1k8UcGe/LVpoeHh4eId5ecKal3pnwwqzxtvlPwY8PDy8rbwk9PZIqEvhtn8G8PDw8DbxTgwNtO3/vIRRly3w8PDwDvNWyrIrYc0aYMlC4+Hh4Z3m5UXbNv1tt4E8mY5aX3h4eHhbeXnpIbmyeGR5tyRNj0YH8PDw8DbxZqMA6yNZ7ds7T7Xx8PDwnuTNGmDtS/zEWTw8PLznebOybNswy5dmloIXBx4eHt4Crw2iTZ3bb5JXf1ECxsPDwzvGWyng7ipAzAYRoo0BDw8PbxNvJei2BNCezdPuy6XBw8PDO8CbFSbaV3+7JeTPbZtzeHh4eLt4s81g19hBS61LwHh4eHjHeOf2nJWlyTetSyQeHh7eB/B21Utny1GPEeDh4eG9lZcHl7T/78uv+QDBiwjx8PDwjvFWRgdmCXQ77JUXR/Dw8PBO81YaYLPtoU3E86iGVDw8PLyU9wMQ24i9iydbKgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/node-waves@0.7.6/src/js/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+<script src="/js/prism.min.js?v=1.7.2"></script>
+<script src="/js/prism-vim.min.js?v=1.7.2"></script>
+</body>
+</html>

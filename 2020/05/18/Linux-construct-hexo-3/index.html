@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>【博客搭建系列】（三）博客免费上线——GitHub | Keep Forward | 吴江龙</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="博客搭建系列">
+    <meta name="description" content="上一篇文章【博客搭建系列】（二）Hexo主题安装介绍了如何安装Hexo主题，对主题做了一些个性化的调整，整体上来说已经基本成型，其他细节性的东西可以在后期慢慢调整。博客雏形有了，接下来的问题就是如何发布到互联网上去，让更多人可以访问。下面就来介绍一种方便且免费的上线方式——Hexo + GitHub Pages。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【博客搭建系列】（三）博客免费上线——GitHub">
+<meta property="og:url" content="https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-3/index.html">
+<meta property="og:site_name" content="Keep Forward">
+<meta property="og:description" content="上一篇文章【博客搭建系列】（二）Hexo主题安装介绍了如何安装Hexo主题，对主题做了一些个性化的调整，整体上来说已经基本成型，其他细节性的东西可以在后期慢慢调整。博客雏形有了，接下来的问题就是如何发布到互联网上去，让更多人可以访问。下面就来介绍一种方便且免费的上线方式——Hexo + GitHub Pages。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-3/3-1.png">
+<meta property="og:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-3/3-2.png">
+<meta property="og:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-3/3-3.png">
+<meta property="og:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-3/3-4.png">
+<meta property="og:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-3/3-5.png">
+<meta property="article:published_time" content="2020-05-18T12:43:44.734Z">
+<meta property="article:modified_time" content="2020-05-18T12:49:16.561Z">
+<meta property="article:author" content="JiangLong Wu">
+<meta property="article:tag" content="博客搭建系列">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wujlmochasoft.github.io/gallery/Linux-construct-hexo-3/3-1.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="Keep Forward" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon-wujl.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <link rel="stylesheet" href="/css/prism/prism-tomorrow-night.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-list-ul"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/back_blue.png)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar-wujl.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">JiangLong Wu</h5>
+          <a href="mailto:wujl.vince@gmail.com" title="wujl.vince@gmail.com" class="mail">wujl.vince@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives/"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories/"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags/"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/books/"  >
+                <i class="icon icon-lg icon-book"></i>
+                读书
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about/"  >
+                <i class="icon icon-lg icon-info-circle"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">【博客搭建系列】（三）博客免费上线——GitHub</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">【博客搭建系列】（三）博客免费上线——GitHub</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-05-18T12:43:44.734Z" itemprop="datePublished" class="page-time">
+  2020-05-18
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B/">自己动手</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建GitHub空间"><span class="post-toc-text">创建GitHub空间</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置发布权限"><span class="post-toc-text">配置发布权限</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Git配置"><span class="post-toc-text">Git配置</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#生成密钥"><span class="post-toc-text">生成密钥</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#添加密钥"><span class="post-toc-text">添加密钥</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#发布上线"><span class="post-toc-text">发布上线</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置发布地址"><span class="post-toc-text">配置发布地址</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#安装插件"><span class="post-toc-text">安装插件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#发布上线-1"><span class="post-toc-text">发布上线</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#线上博客"><span class="post-toc-text">线上博客</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#参考资料"><span class="post-toc-text">参考资料</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Linux-construct-hexo-3"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">【博客搭建系列】（三）博客免费上线——GitHub</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-05-18 20:43:44" datetime="2020-05-18T12:43:44.734Z"  itemprop="datePublished">2020-05-18</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B/">自己动手</a></li></ul>
+
+
+
+            
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>上一篇文章<a href="www.baidu.com">【博客搭建系列】（二）Hexo主题安装</a>介绍了如何安装Hexo主题，对主题做了一些个性化的调整，整体上来说已经基本成型，其他细节性的东西可以在后期慢慢调整。<br>博客雏形有了，接下来的问题就是如何发布到互联网上去，让更多人可以访问。下面就来介绍一种方便且免费的上线方式——<a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> + <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>。</p>
+<a id="more"></a>     
+<h3 id="创建GitHub空间"><a href="#创建GitHub空间" class="headerlink" title="创建GitHub空间"></a>创建GitHub空间</h3><p>想要使用<code>GitHub Pages</code>必须先注册一个<code>GitHub</code>账号，注册过程略，注册完成后登录。</p>
+<p>登录后点击右上角<code>+</code>，选择<code>New repository</code>新建github仓库。</p>
+<p>需要填写的内容有三部分：</p>
+<ol>
+<li>仓库名称。这里的写法是固定的，必须填写<code>用户名.github.io</code></li>
+<li>仓库描述。这里写对仓库的描述，选填。</li>
+<li>初始化仓库。对仓库进行初始化，必须勾选。</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/gallery/Linux-construct-hexo-3/3-1.png" alt="image-20200510221001196" title="">
+                </div>
+                <div class="image-caption">image-20200510221001196</div>
+            </figure>
+<p>填写完成之后，点击<code>Create repository</code>创建仓库。</p>
+<p>仓库创建成功之后，即可在浏览器通过<code>github账号名.github.io</code>来访问该仓库。（PS：上面的这个网址就是以后访问博客的地址。）</p>
+<h3 id="配置发布权限"><a href="#配置发布权限" class="headerlink" title="配置发布权限"></a>配置发布权限</h3><p>完成上面的一步，相当于已经有了一个线上的空间。接下来只需要把博客内容部署到这个空间来就可以了。但是在这之前需要先进行一个发布权限的配置，也就是告诉GitHub确认从哪台机器上把东西传输到这个空间。</p>
+<h4 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h4><p>这一步需要在git中配置用户名和邮箱地址，具体命令如下。</p>
+<pre><code class="lang-sh">$ git config --global user.name &quot;github用户名&quot;
+$ git config --global user.email test@example.com # 邮箱地址
+</code></pre>
+<h4 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h4><p>这一步生成<code>SSH</code>密钥，命令如下。</p>
+<pre><code class="lang-shell">ssh-keygen -t rsa # 一直回车直到结束
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/gallery/Linux-construct-hexo-3/3-2.png" alt="image-20200510225323007" title="">
+                </div>
+                <div class="image-caption">image-20200510225323007</div>
+            </figure>
+<p>在上面标注的路径下，使用<code>cat</code>命令查看<code>id_rsa.pub</code>文件，然后将其内容复制下一步要用。</p>
+<pre><code>cat /root/.ssh/id_rsa.pub
+</code></pre><h4 id="添加密钥"><a href="#添加密钥" class="headerlink" title="添加密钥"></a>添加密钥</h4><p>这一步要在github中添加本地的公共密钥。</p>
+<ol>
+<li>点击github账号头像，选择<code>setting</code>。</li>
+<li>点击<code>New SSH key</code>按钮。</li>
+<li>将上一步复制的密钥添加进去。</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/gallery/Linux-construct-hexo-3/3-3.png" alt="3-3" title="">
+                </div>
+                <div class="image-caption">3-3</div>
+            </figure>
+<p>添加完成后使用下面的命令验证，若无异常，则添加成功。</p>
+<pre><code class="lang-sh">[root@blog icarus]# ssh -T git@github.com
+The authenticity of host &#39;github.com (13.229.188.59)&#39; can&#39;t be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+RSA key fingerprint is MD5:16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added &#39;github.com,13.229.188.59&#39; (RSA) to the list of known hosts.
+Hi wujlmochasoft! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre>
+<h3 id="发布上线"><a href="#发布上线" class="headerlink" title="发布上线"></a>发布上线</h3><h4 id="配置发布地址"><a href="#配置发布地址" class="headerlink" title="配置发布地址"></a>配置发布地址</h4><p>配置完github端的发布权限，现在来配置Hexo服务端的部署地址。</p>
+<p>在Hexo服务根目录下，打开<code>_config.yml</code>文件，修改<code>deploy</code>部分，如下。</p>
+<pre><code class="lang-sh">deploy:
+  type: git
+  repository: git@github.com:用户名/用户名.github.io.git
+  branch: master
+</code></pre>
+<h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><p>想要让Hexo把Blog发布到github还需要依赖一个插件来完成。在Hexo服务根目录下（/root/blog）执行下面的命令进行安装。</p>
+<pre><code class="lang-sh">npm install hexo-deployer-git --save
+</code></pre>
+<p>若无报错，则安装成功。</p>
+<h4 id="发布上线-1"><a href="#发布上线-1" class="headerlink" title="发布上线"></a>发布上线</h4><p>最后，一切都准备就绪。下面就用一行命令来发布吧。</p>
+<pre><code> hexo d -g
+</code></pre><p>若看到如下信息，则部署成功。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/gallery/Linux-construct-hexo-3/3-4.png" alt="image-20200510231904795" title="">
+                </div>
+                <div class="image-caption">image-20200510231904795</div>
+            </figure>
+<h4 id="线上博客"><a href="#线上博客" class="headerlink" title="线上博客"></a>线上博客</h4><p>最后，在浏览器中输入<code>https://用户名.github.io</code>来访问线上博客。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/gallery/Linux-construct-hexo-3/3-5.png" alt="3-5" title="">
+                </div>
+                <div class="image-caption">3-5</div>
+            </figure>
+<p>至此，博客上线已全部结束。</p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><blockquote>
+<p><a href="https://www.cnblogs.com/fengxiongZz/p/7707219.html" target="_blank" rel="noopener">[1] 使用Hexo+Github一步步搭建属于自己的博客（基础）</a><br><a href="https://www.jianshu.com/p/1bcad7700c46" target="_blank" rel="noopener">[2] 使用hexo搭建github博客</a></p>
+</blockquote>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2020-05-18T12:49:16.561Z" itemprop="dateUpdated">2020-05-18 20:49:16</time>
+</span><br>
+
+
+        
+        文章发布地址：<a href="/2020/05/18/Linux-construct-hexo-3/" target="_blank" rel="external">https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-3/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://wujlmochasoft.github.io">
+            <img src="/img/avatar-wujl.jpg" alt="JiangLong Wu">
+            JiangLong Wu
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%B3%BB%E5%88%97/" rel="tag">博客搭建系列</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-3/&title=《【博客搭建系列】（三）博客免费上线——GitHub》 — Keep Forward&pic=https://wujlmochasoft.github.io/img/avatar-wujl.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-3/&title=《【博客搭建系列】（三）博客免费上线——GitHub》 — Keep Forward&source=上一篇文章【博客搭建系列】（二）Hexo主题安装介绍了如何安装Hexo主题，对主题做了一些个性化的调整，整体上来说已经基本成型，其他细节性的东西可以在后期..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-3/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【博客搭建系列】（三）博客免费上线——GitHub》 — Keep Forward&url=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-3/&via=https://wujlmochasoft.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-3/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/05/18/Linux-construct-hexo-4/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">【博客搭建系列】（四）ICARUS主题个性化</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/05/18/Linux-construct-hexo-2/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">【博客搭建系列】（二）Hexo主题安装</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment v" id="vcomments"></div>
+    <!-- <div class="comment" id="comment"></div> -->
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+    <!-- <script src="//t1.aixinxi.net/o_1c3n4pim01nl3jg91b6l1kjtkvsa.js"></script> -->
+    <!-- <script src="/js/Valine.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cat.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            av: AV,
+            // el: '#comments',
+            el: '#vcomments',
+            emoticon_url: 'https://abelsu7.top/alu', //表情图片网址
+            emoticon_list: ["赞一个.png","坐等.png","长草.png","阴暗.png","邪恶.png","小眼睛.png","想一想.png","献黄瓜.png","献花.png","喜极而泣.png","无语.png","无所谓.png","无奈.png","投降.png","深思.png","期待.png","狂汗.png","蜡烛.png","看不见.png","惊喜.png","击掌.png","欢呼.png","得意.png","不出所料.png","观察.png"],//表情图片文件名
+            // notify: 'false' == 'false',
+            // verify: 'false' == 'false',
+            // notify: 'false',
+            // verify: 'false',
+            notify: false,
+            verify: false,
+            appId: "FtNqDTQG78qc0uYx1Qq69hTM-MdYXbMMI",
+            appKey: "bqe57UtEf4N68odS3XOEnwXq",
+            avatar: "mp",
+            placeholder: "Write a comment",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+            <p>
+                
+                    <span>
+                        <a href="/atom.xml" target="_blank" class="rss" title="rss">
+                            <i class="icon icon-lg icon-rss"></i>
+                        </a>
+                    </span>
+                    
+                        <span>
+                            博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a>
+                        </span>
+            </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>
+                JiangLong Wu &copy;
+                    
+                                2020
+            </span>
+            <span>
+                
+                        Power by
+                        <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+                        <a href="https://github.com/abelsu7/hexo-theme-indigo-plus" target="_blank">indigo plus</a>
+                        <p>Hosted by <a href="https://pages.github.com" target="_blank" style="font-weight: bold">Github Pages</a></p>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<a href="javascript:;" id="gobottom" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-comments"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-3/&title=《【博客搭建系列】（三）博客免费上线——GitHub》 — Keep Forward&pic=https://wujlmochasoft.github.io/img/avatar-wujl.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-3/&title=《【博客搭建系列】（三）博客免费上线——GitHub》 — Keep Forward&source=上一篇文章【博客搭建系列】（二）Hexo主题安装介绍了如何安装Hexo主题，对主题做了一些个性化的调整，整体上来说已经基本成型，其他细节性的东西可以在后期..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-3/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【博客搭建系列】（三）博客免费上线——GitHub》 — Keep Forward&url=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-3/&via=https://wujlmochasoft.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wujlmochasoft.github.io/2020/05/18/Linux-construct-hexo-3/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsUlEQVR42u3ayW5CMQwFUP7/p+kWqcC7HkKpdLKqyvBysoiN7dstXveH9fif36++emf+avKp5YWHh4c32HpvE9WD6B1lgn/y/Xh4eHjHeK8ek2zxHqxegEn2c2HBw8PD+wJegu9t8f1O8PDw8P47Lw8SeZiphhA8PDy8v+UlqXDyqbx8UC3XHq+14OHh4cW8vIv0PX8f6e/h4eHhjbvq8+S4mohXA8DFbvHw8PAO8Hbb+dX0t3rd9/aJh4eHd4I3ubJzWC+o5N8WHQQeHh7emDe53OfX91ZBNqpP4+Hh4S3xes2qZFAgenAcSCZ7wMPDwzvBSy706ia2igtrnT08PDy8Jd6k1dT7hvfHUf1P1N/Dw8PDW+Uld2m1hFr9zqRJlgSJaD94eHh4Y15+Wfe2VS1VTMLJxUwEHh4e3mFer7hQbk3F130+0PBkdAAPDw9vldcrofaS3d2mWrWogYeHh3eOVy0ETMq+eeK+tvDw8PCWeL2WUp7UVocM8hQ8+hmAh4eHt8rrJbvVpDlJl6vg6Pjw8PDwjvGq6XUPUN3cQnsMDw8P7wBvUmydhIReGWKUiOPh4eEt8RJMMkQ16rAVRw0KB4SHh4d3gJcnu72EOHn8pPxRPlw8PDy8JV71Z/8kza0GjHzoKmqD4eHh4X2EV05bg40W5hrikFMYUcXDw8M7wOtVQSfNsF7TK3oPHh4e3mFeXkjNH9xjT0JOs0eHh4eHF/DuxdVLwSfDW/mhPHkVDw8P7wBvq6mft6O2BhR6KT4eHh7eFi8PBr221n28qoEBDw8P7zO8reGqPJxMRgqS1hoeHh7ed/J6ZYLqFV8tEK8FBjw8PLwl3qTFlR9ZPqp1EVrw8PDwjvGqTa88jU6CSnWI4UitBQ8PD69fGSj84M8T6zz5rgaYhYWHh4eX8n4AEc1UuZ17dcoAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/node-waves@0.7.6/src/js/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+<script src="/js/prism.min.js?v=1.7.2"></script>
+<script src="/js/prism-vim.min.js?v=1.7.2"></script>
+</body>
+</html>
